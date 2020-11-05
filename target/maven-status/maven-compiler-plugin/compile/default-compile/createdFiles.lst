@@ -1,0 +1,11 @@
+bookmarket\BookApplication.class
+bookmarket\PolicyHandler.class
+bookmarket\AbstractEvent$1.class
+bookmarket\BookAlarmController.class
+bookmarket\config\kafka\KafkaProcessor.class
+bookmarket\DeliveryCanceled.class
+bookmarket\Shipped.class
+bookmarket\AbstractEvent.class
+bookmarket\BookAlarmRepository.class
+bookmarket\MessageSended.class
+bookmarket\BookAlarm.class
