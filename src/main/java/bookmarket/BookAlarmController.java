@@ -23,7 +23,8 @@ import java.util.Optional;
     //Sleep for Load
     Thread.sleep(3000);
 
-    return bookAlarm.get().getBookMessage();
+    return "";
+
   }
 
 
@@ -42,7 +43,10 @@ import java.util.Optional;
     //throw new RuntimeException("CircuitBreaker!!!");
    } else {
     Optional<BookAlarm> bookAlarm = bookAlarmRepository.findById(id);
-    return bookAlarm.get().getBookMessage();
+    return bookAlarm.get().toString();
+
+
+
    }
 
    System.out.println("$$$ SUCCESS!!!");
