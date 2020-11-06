@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: bookalarm
-          image: admin31.azurecr.io/bookalarm:latest
+          image: admin30.azurecr.io/bookalarm:latest
           ports:
             - containerPort: 8080
  #        resources:
