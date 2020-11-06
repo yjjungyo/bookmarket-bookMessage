@@ -13,6 +13,22 @@ import java.util.Optional;
   @Autowired
   BookAlarmRepository bookAlarmRepository;
 
+
+ @RequestMapping(method = RequestMethod.GET, path = "/autoScaleTest") //localhost:8080/api/getMethod
+ public String autoScaleTest(@RequestParam long id) throws InterruptedException {
+
+    System.out.println("========= bookAlarm AutoScale Test ============");
+    Optional<BookAlarm> bookAlarm = bookAlarmRepository.findById(id);
+
+    //Sleep for Load
+    Thread.sleep(3000);
+
+    return bookAlarm.get().getBookMessage();
+  }
+
+
+
+
   @GetMapping("/selectBookAlarmInfo")
   @HystrixCommand(fallbackMethod = "fallback", commandProperties = {
           @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000"),
